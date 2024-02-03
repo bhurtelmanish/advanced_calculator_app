@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator app using js</title>
+    <link rel="stylesheet" href="calculator.css">
+    <script src="calculator.js" defer></script>
+</head>
+<body>
+    <div class="calculator">
+        <div class="display">
+            <div class="result"></div>
+        </div>
+
+        <div class="operands">
+            <div class="section1">
+                <div class="operands-1">
+                    <button class="operands-group-1 all-delete" onclick="allDelete()">C</button>
+                    <button class="operands-group-1 delete" onclick="lastDelete()">Del</button>
+                    <button class="operands-group-1 mod" onclick="appendNumberToDisplay('%')">%</button>
+                </div>
+                <div class="numbers-container">
+                    <div class="number-group1">
+                        <button class="nums num7" onclick="appendNumberToDisplay('7')">7</button>
+                        <button class="nums num8" onclick="appendNumberToDisplay('8')">8</button>
+                        <button class="nums num9" onclick="appendNumberToDisplay('9')">9</button>
+                    </div>
+                    <div class="number-group2">
+                        <button class="nums num4" onclick="appendNumberToDisplay('4')">4</button>
+                        <button class="nums num5" onclick="appendNumberToDisplay('5')">5</button>
+                        <button class="nums num6" onclick="appendNumberToDisplay('6')">6</button>
+                    </div>
+                    <div class="number-group3">
+                        <button class="nums num1" onclick="appendNumberToDisplay('1')">1</button>
+                        <button class="nums num2" onclick="appendNumberToDisplay('2')">2</button>
+                        <button class="nums num3" onclick="appendNumberToDisplay('3')">3</button>
+                    </div>
+                    <div class="number-group4">
+                        <button class="nums num0" id="zero" onclick="appendNumberToDisplay('0')">0</button>
+                        <button class="nums decimal" onclick="appendNumberToDisplay('.')">.</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section2">
+                <button class="operands-group-2 divide" onclick="appendNumberToDisplay('/')">/</button>
+                <button class="operands-group-2 multiply" onclick="appendNumberToDisplay('*')">x</button>
+                <button class="operands-group-2 subtract" onclick="appendNumberToDisplay('-')">-</button>
+                <button class="operands-group-2 add" onclick="appendNumberToDisplay('+')">+</button>
+                <button class="operands-group-2 equals-to" onclick="calculateResult()">=</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
